@@ -1,0 +1,22 @@
+{
+  "name": "student-event-tracker",
+  "version": "1.0.0",
+  "description": "Centralized Student Co-curricular Achievement and Event Tracker with Certificate Uploads and Faculty Verification for College IT Department",
+  "scripts": {
+    "start:backend": "node backend/src/server.js",
+    "start:frontend": "cd frontend && npm run dev",
+    "seed": "node backend/src/seeds/seed.js",
+    "test:backend": "node backend/test-api.js"
+  },
+  "keywords": [
+    "student-tracker",
+    "event-tracker",
+    "co-curricular",
+    "college-portal",
+    "react",
+    "express",
+    "postgresql"
+  ],
+  "author": "College IT Department",
+  "license": "MIT"
+}
