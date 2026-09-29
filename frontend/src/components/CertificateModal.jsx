@@ -85,16 +85,16 @@ const CertificateModal = ({ isOpen, onClose, achievement }) => {
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
-                        background: '#f1f5f9',
+                        background: 'var(--bg-card-subtle)',
                         padding: '0.85rem 1.25rem',
                         borderRadius: '10px',
                         fontSize: '0.85rem'
                     }}>
                         <div style={{ textAlign: 'left' }}>
-                            <span style={{ fontWeight: 600, color: '#334155' }}>Student: </span>
-                            <span style={{ color: '#0f172a' }}>{achievement.student_name || 'N/A'}</span>
+                            <span style={{ fontWeight: 600, color: 'var(--slate-600)' }}>Student: </span>
+                            <span style={{ color: 'var(--text-main)' }}>{achievement.student_name || 'N/A'}</span>
                             {achievement.student_roll_no && (
-                                <span style={{ color: '#64748b', marginLeft: '0.5rem' }}>({achievement.student_roll_no})</span>
+                                <span style={{ color: 'var(--text-muted)', marginLeft: '0.5rem' }}>({achievement.student_roll_no})</span>
                             )}
                         </div>
                         <div style={{ display: 'flex', gap: '0.75rem' }}>

@@ -25,14 +25,14 @@ const NotFound = ({ onGoHome }) => {
                 }}>
                     <AlertCircle size={36} />
                 </div>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: 900, color: '#0f172a', margin: '0 0 0.5rem 0' }}>
+                <h1 style={{ fontSize: '2.5rem', fontWeight: 900, color: 'var(--text-main)', margin: '0 0 0.5rem 0' }}>
                     404
                 </h1>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#334155', margin: '0 0 0.75rem 0' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: 700, color: 'var(--slate-600)', margin: '0 0 0.75rem 0' }}>
                     Page Not Found
                 </h2>
-                <p style={{ color: '#64748b', fontSize: '0.9rem', marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                    The page or resource you requested could not be located on the Student Event Tracker academic portal.
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', marginBottom: '1.5rem', lineHeight: 1.5 }}>
+                    The page or resource you requested could not be located on the Certificate Tracker academic portal.
                 </p>
                 <button
                     className="btn btn-primary"

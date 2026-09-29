@@ -72,7 +72,7 @@ function AppContent() {
                     animation: 'spin 0.8s linear infinite'
                 }} />
                 <div style={{ color: '#64748b', fontWeight: 600, fontSize: '0.9rem' }}>
-                    Loading Student Event Tracker...
+                    Loading Certificate Tracker...
                 </div>
                 <style>{`
                     @keyframes spin {

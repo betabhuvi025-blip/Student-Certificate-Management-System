@@ -84,10 +84,10 @@ const ApprovalsList = ({ onRefreshCounts }) => {
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                        <CheckSquare size={24} color="#2563eb" /> Verification & Approval Queue
+                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-main)', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                        <CheckSquare size={24} color="var(--primary-500)" /> Verification & Approval Queue
                     </h2>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                         Review submitted certificates, verify event authenticity, and approve activity points.
                     </p>
                 </div>
@@ -189,11 +189,11 @@ const ApprovalsList = ({ onRefreshCounts }) => {
                                         {item.student_name ? item.student_name.charAt(0).toUpperCase() : 'S'}
                                     </div>
                                     <div>
-                                        <div style={{ fontSize: '1rem', fontWeight: 700, color: '#0f172a' }}>
+                                        <div style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-main)' }}>
                                             {item.student_name}
                                         </div>
-                                        <div style={{ fontSize: '0.8rem', color: '#64748b', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                                            <span style={{ fontWeight: 600, color: '#1e3a8a' }}>{item.student_roll_no || 'Roll: N/A'}</span>
+                                        <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                                            <span style={{ fontWeight: 600, color: 'var(--primary-400)' }}>{item.student_roll_no || 'Roll: N/A'}</span>
                                             &bull;
                                             <span>{item.student_year || 'Year N/A'} - Sec {item.student_section || 'N/A'}</span>
                                             &bull;
@@ -218,11 +218,11 @@ const ApprovalsList = ({ onRefreshCounts }) => {
 
                             {/* Achievement Details */}
                             <div style={{
-                                background: '#f8fafc',
+                                background: 'var(--bg-card-subtle)',
                                 borderRadius: '10px',
                                 padding: '1rem 1.25rem',
                                 marginBottom: '1rem',
-                                border: '1px solid #e2e8f0'
+                                border: '1px solid var(--border-color)'
                             }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
                                     <span style={{
@@ -230,19 +230,19 @@ const ApprovalsList = ({ onRefreshCounts }) => {
                                         fontWeight: 700,
                                         padding: '0.15rem 0.5rem',
                                         borderRadius: '4px',
-                                        background: '#2563eb',
+                                        background: 'var(--primary-500)',
                                         color: 'white',
                                         textTransform: 'uppercase'
                                     }}>
                                         {item.category}
                                     </span>
-                                    <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', margin: 0 }}>
+                                    <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)', margin: 0 }}>
                                         {item.title}
                                     </h4>
                                 </div>
 
                                 {item.description && (
-                                    <p style={{ fontSize: '0.88rem', color: '#475569', margin: '0.5rem 0', lineHeight: 1.5 }}>
+                                    <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: '0.5rem 0', lineHeight: 1.5 }}>
                                         {item.description}
                                     </p>
                                 )}

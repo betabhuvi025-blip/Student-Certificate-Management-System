@@ -97,10 +97,10 @@ const ReportsExport = () => {
             {/* Header */}
             <div className="no-print" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                        <FileSpreadsheet size={24} color="#059669" /> Reports &amp; Accreditation Export
+                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-main)', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                        <FileSpreadsheet size={24} color="var(--emerald-500)" /> Reports &amp; Accreditation Export
                     </h2>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                         Filter student event submissions and export official records for NAAC, NBA, and departmental reviews.
                     </p>
                 </div>
@@ -284,16 +284,16 @@ const ReportsExport = () => {
                                     <tr key={ach.id}>
                                         <td style={{ color: '#94a3b8', fontSize: '0.8rem' }}>{idx + 1}</td>
                                         <td>
-                                            <div style={{ fontWeight: 600, color: '#0f172a' }}>{ach.student_name}</div>
-                                            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{ach.student_roll_no || 'N/A'}</div>
+                                            <div style={{ fontWeight: 600, color: 'var(--text-main)' }}>{ach.student_name}</div>
+                                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{ach.student_roll_no || 'N/A'}</div>
                                         </td>
                                         <td>
-                                            <span style={{ fontSize: '0.82rem', color: '#475569' }}>
+                                            <span style={{ fontSize: '0.82rem', color: 'var(--slate-600)' }}>
                                                 {ach.student_year || 'N/A'} ({ach.student_section || 'A'})
                                             </span>
                                         </td>
                                         <td>
-                                            <div style={{ fontWeight: 600, color: '#0f172a', maxWidth: '220px' }}>
+                                            <div style={{ fontWeight: 600, color: 'var(--text-main)', maxWidth: '220px' }}>
                                                 {ach.title}
                                             </div>
                                         </td>

@@ -79,10 +79,10 @@ const Portfolio = ({ onOpenAddModal, onEditAchievement }) => {
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
+                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>
                         My Achievement Portfolio
                     </h2>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                         Manage your co-curricular records, verified certificates, and track approval feedback.
                     </p>
                 </div>
@@ -170,14 +170,14 @@ const Portfolio = ({ onOpenAddModal, onEditAchievement }) => {
                                     <StatusBadge status={ach.approval_status} />
                                 </div>
 
-                                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', marginBottom: '0.5rem', lineHeight: 1.35 }}>
+                                <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-main)', marginBottom: '0.5rem', lineHeight: 1.35 }}>
                                     {ach.title}
                                 </h3>
 
                                 {ach.description && (
                                     <p style={{
                                         fontSize: '0.84rem',
-                                        color: '#475569',
+                                        color: 'var(--text-muted)',
                                         marginBottom: '1rem',
                                         lineHeight: 1.5,
                                         display: '-webkit-box',

@@ -309,10 +309,10 @@ const AddAchievementModal = ({ isOpen, onClose, onSuccess, initialData = null })
                                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem' }}>
                                         <FileText size={28} color="#2563eb" />
                                         <div style={{ textAlign: 'left' }}>
-                                            <div style={{ fontSize: '0.88rem', fontWeight: 600, color: '#0f172a' }}>
+                                            <div style={{ fontSize: '0.88rem', fontWeight: 600, color: 'var(--text-main)' }}>
                                                 {file.name}
                                             </div>
-                                            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
                                                 {(file.size / (1024 * 1024)).toFixed(2)} MB &bull; Ready to upload
                                             </div>
                                         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu, LogOut, Award, User as UserIcon } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import NotificationDropdown from './NotificationDropdown';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Navbar = ({ onToggleSidebar, activeTab, setActiveTab }) => {
     const { user, logout } = useAuth();
@@ -22,12 +23,14 @@ const Navbar = ({ onToggleSidebar, activeTab, setActiveTab }) => {
                     <Award size={22} />
                 </div>
                 <div>
-                    <h1 className="navbar-title">Student Event Tracker</h1>
+                    <h1 className="navbar-title">Certificate Tracker</h1>
                     <div className="navbar-subtitle">Department of Information Technology</div>
                 </div>
             </div>
 
             <div className="navbar-actions">
+                <ThemeSwitcher />
+
                 {user && (
                     <span className={`role-badge ${user.role}`}>
                         {user.role}
@@ -57,8 +60,8 @@ const Navbar = ({ onToggleSidebar, activeTab, setActiveTab }) => {
                                 {user.name ? user.name.charAt(0).toUpperCase() : 'U'}
                             </div>
                             <div style={{ textAlign: 'left', display: 'none' }} className="user-nav-meta">
-                                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#0f172a' }}>{user.name}</div>
-                                <div style={{ fontSize: '0.72rem', color: '#64748b' }}>{user.roll_no || user.role}</div>
+                                <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-main)' }}>{user.name}</div>
+                                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{user.roll_no || user.role}</div>
                             </div>
                         </button>
 

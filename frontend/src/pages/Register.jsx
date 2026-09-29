@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Award, Lock, Mail, User, ArrowRight, BookOpen, Hash } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 const Register = ({ onSwitchToLogin }) => {
     const { register } = useAuth();
@@ -67,19 +68,28 @@ const Register = ({ onSwitchToLogin }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%)',
-            padding: '2rem 1.5rem'
+            background: 'var(--login-bg)',
+            padding: '2rem 1.5rem',
+            position: 'relative'
         }}>
+            {/* Top-right theme selector */}
+            <div style={{ position: 'absolute', top: '1.25rem', right: '1.5rem', zIndex: 10 }}>
+                <ThemeSwitcher />
+            </div>
+
             <div style={{
-                background: '#ffffff',
+                background: 'var(--bg-card)',
                 borderRadius: '20px',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)',
+                boxShadow: 'var(--shadow-xl)',
+                border: '1px solid var(--border-color)',
                 width: '100%',
                 maxWidth: '520px',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                backdropFilter: 'blur(16px)'
             }}>
                 <div style={{
-                    background: 'linear-gradient(135deg, #1e3a8a, #2563eb)',
+                    background: 'var(--banner-gradient)',
+                    borderBottom: '1px solid var(--banner-border)',
                     color: '#ffffff',
                     padding: '2rem',
                     textAlign: 'center'
@@ -101,7 +111,7 @@ const Register = ({ onSwitchToLogin }) => {
                         Create Portal Account
                     </h2>
                     <p style={{ fontSize: '0.82rem', color: '#bfdbfe', marginTop: '0.25rem' }}>
-                        Register for the IT Department Student Event Tracker
+                        Register for the IT Department Certificate Tracker
                     </p>
                 </div>
 
@@ -285,12 +295,12 @@ const Register = ({ onSwitchToLogin }) => {
                         </button>
                     </form>
 
-                    <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: '#64748b' }}>
+                    <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                         Already have an account?{' '}
                         <button
                             type="button"
                             onClick={onSwitchToLogin}
-                            style={{ background: 'none', border: 'none', color: '#2563eb', fontWeight: 600, cursor: 'pointer' }}
+                            style={{ background: 'none', border: 'none', color: 'var(--primary-500)', fontWeight: 600, cursor: 'pointer' }}
                         >
                             Sign In
                         </button>

@@ -50,8 +50,8 @@ const Sidebar = ({ activeTab, setActiveTab, isOpen, onClose, pendingCount = 0 })
         <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
             <div className="sidebar-header">
                 <div className="portal-tag">College IT Portal</div>
-                <div style={{ fontSize: '0.82rem', fontWeight: 600, color: '#334155', marginTop: '0.5rem' }}>
-                    Co-curricular Event Tracker
+                <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--slate-600)', marginTop: '0.5rem' }}>
+                    Certificate Tracker
                 </div>
             </div>
 

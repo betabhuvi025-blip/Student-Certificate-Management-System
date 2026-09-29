@@ -133,10 +133,10 @@ const HODDashboard = ({ onNavigateApprovals, onNavigateReports, onNavigateLeader
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                        <BarChart3 size={24} color="#1e3a8a" /> Departmental Analytics &amp; Executive Overview
+                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-main)', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                        <BarChart3 size={24} color="var(--primary-500)" /> Departmental Analytics &amp; Executive Overview
                     </h2>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                         Real-time student participation metrics, approval workflows, and achievement trends for IT Department.
                     </p>
                 </div>
@@ -313,14 +313,14 @@ const HODDashboard = ({ onNavigateApprovals, onNavigateReports, onNavigateLeader
                                                 <span style={{
                                                     fontWeight: 800,
                                                     fontSize: '0.9rem',
-                                                    color: idx === 0 ? '#d97706' : idx === 1 ? '#64748b' : idx === 2 ? '#b45309' : '#0f172a'
+                                                    color: idx === 0 ? '#d97706' : idx === 1 ? 'var(--text-muted)' : idx === 2 ? '#b45309' : 'var(--text-main)'
                                                 }}>
                                                     #{idx + 1}
                                                 </span>
                                             </td>
                                             <td>
-                                                <div style={{ fontWeight: 600, color: '#0f172a' }}>{s.name}</div>
-                                                <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{s.roll_no || 'N/A'}</div>
+                                                <div style={{ fontWeight: 600, color: 'var(--text-main)' }}>{s.name}</div>
+                                                <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{s.roll_no || 'N/A'}</div>
                                             </td>
                                             <td>
                                                 <span style={{ fontSize: '0.8rem', color: '#475569' }}>

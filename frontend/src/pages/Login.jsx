@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Award, Lock, Mail, ArrowRight, ShieldCheck, GraduationCap, Users } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 const Login = ({ onSwitchToRegister }) => {
     const { login } = useAuth();
@@ -47,19 +48,28 @@ const Login = ({ onSwitchToRegister }) => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #1e293b 100%)',
-            padding: '1.5rem'
+            background: 'var(--login-bg)',
+            padding: '1.5rem',
+            position: 'relative'
         }}>
+            {/* Top-right theme selector */}
+            <div style={{ position: 'absolute', top: '1.25rem', right: '1.5rem', zIndex: 10 }}>
+                <ThemeSwitcher />
+            </div>
+
             <div style={{
-                background: '#ffffff',
+                background: 'var(--bg-card)',
                 borderRadius: '20px',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.35)',
+                boxShadow: 'var(--shadow-xl)',
+                border: '1px solid var(--border-color)',
                 width: '100%',
                 maxWidth: '480px',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                backdropFilter: 'blur(16px)'
             }}>
                 <div style={{
-                    background: 'linear-gradient(135deg, #1e3a8a, #2563eb)',
+                    background: 'var(--banner-gradient)',
+                    borderBottom: '1px solid var(--banner-border)',
                     color: '#ffffff',
                     padding: '2.5rem 2rem 2rem 2rem',
                     textAlign: 'center'
@@ -78,7 +88,7 @@ const Login = ({ onSwitchToRegister }) => {
                         <Award size={30} color="#ffffff" />
                     </div>
                     <h2 style={{ fontSize: '1.45rem', fontWeight: 800, margin: 0, color: '#ffffff' }}>
-                        Student Event Tracker
+                        Certificate Tracker
                     </h2>
                     <p style={{ fontSize: '0.85rem', color: '#bfdbfe', marginTop: '0.35rem' }}>
                         Department of Information Technology &bull; Academic Portal
@@ -151,12 +161,12 @@ const Login = ({ onSwitchToRegister }) => {
                     <div style={{
                         marginTop: '1.75rem',
                         paddingTop: '1.5rem',
-                        borderTop: '1px dashed #e2e8f0'
+                        borderTop: '1px dashed var(--border-color)'
                     }}>
                         <div style={{
                             fontSize: '0.75rem',
                             fontWeight: 700,
-                            color: '#64748b',
+                            color: 'var(--text-muted)',
                             textTransform: 'uppercase',
                             letterSpacing: '0.05em',
                             marginBottom: '0.75rem',
@@ -172,7 +182,7 @@ const Login = ({ onSwitchToRegister }) => {
                                 onClick={() => handleQuickLogin('student@college.edu')}
                                 disabled={loading}
                             >
-                                <GraduationCap size={16} color="#2563eb" />
+                                <GraduationCap size={16} color="var(--primary-500)" />
                                 <span>Student</span>
                             </button>
                             <button
@@ -182,7 +192,7 @@ const Login = ({ onSwitchToRegister }) => {
                                 onClick={() => handleQuickLogin('faculty@college.edu')}
                                 disabled={loading}
                             >
-                                <Users size={16} color="#059669" />
+                                <Users size={16} color="var(--emerald-500)" />
                                 <span>Faculty</span>
                             </button>
                             <button
@@ -192,18 +202,18 @@ const Login = ({ onSwitchToRegister }) => {
                                 onClick={() => handleQuickLogin('hod@college.edu')}
                                 disabled={loading}
                             >
-                                <ShieldCheck size={16} color="#9333ea" />
+                                <ShieldCheck size={16} color="#c084fc" />
                                 <span>HOD</span>
                             </button>
                         </div>
                     </div>
 
-                    <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: '#64748b' }}>
+                    <div style={{ marginTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                         Don't have an account yet?{' '}
                         <button
                             type="button"
                             onClick={onSwitchToRegister}
-                            style={{ background: 'none', border: 'none', color: '#2563eb', fontWeight: 600, cursor: 'pointer' }}
+                            style={{ background: 'none', border: 'none', color: 'var(--primary-500)', fontWeight: 600, cursor: 'pointer' }}
                         >
                             Register New Account
                         </button>

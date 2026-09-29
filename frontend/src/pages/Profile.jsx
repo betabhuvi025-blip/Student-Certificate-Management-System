@@ -69,10 +69,10 @@ const Profile = () => {
         <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             {/* Header */}
             <div style={{ marginBottom: '1.5rem' }}>
-                <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
+                <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>
                     Academic Profile &amp; Settings
                 </h2>
-                <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                     Manage your personal student information, academic department details, and activity standing.
                 </p>
             </div>
@@ -227,10 +227,10 @@ const Profile = () => {
                         }}>
                             {name ? name.charAt(0).toUpperCase() : 'U'}
                         </div>
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
+                        <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>
                             {name}
                         </h3>
-                        <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                             {profileData?.email}
                         </p>
 
@@ -244,28 +244,28 @@ const Profile = () => {
                             <div style={{
                                 marginTop: '1.5rem',
                                 paddingTop: '1.5rem',
-                                borderTop: '1px solid #f1f5f9',
+                                borderTop: '1px solid var(--border-color)',
                                 display: 'grid',
                                 gridTemplateColumns: 'repeat(3, 1fr)',
                                 gap: '0.5rem'
                             }}>
                                 <div>
-                                    <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#2563eb' }}>
+                                    <div style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--primary-500)' }}>
                                         {stats.total_points || 0}
                                     </div>
-                                    <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Points</div>
+                                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Points</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#059669' }}>
+                                    <div style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--emerald-500)' }}>
                                         {stats.approved_count || 0}
                                     </div>
-                                    <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Approved</div>
+                                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Approved</div>
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#d97706' }}>
+                                    <div style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--amber-500)' }}>
                                         {stats.pending_count || 0}
                                     </div>
-                                    <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Pending</div>
+                                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Pending</div>
                                 </div>
                             </div>
                         )}
@@ -278,23 +278,23 @@ const Profile = () => {
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.5rem', background: '#f8fafc', borderRadius: '8px' }}>
-                                <div style={{ width: 34, height: 34, borderRadius: '8px', background: '#eff6ff', color: '#2563eb', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.5rem', background: 'var(--bg-card-subtle)', borderRadius: '8px' }}>
+                                <div style={{ width: 34, height: 34, borderRadius: '8px', background: 'var(--primary-100)', color: 'var(--primary-500)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <Award size={18} />
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#0f172a' }}>Verified Contributor</div>
-                                    <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Active student in IT Department</div>
+                                    <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-main)' }}>Verified Contributor</div>
+                                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Active student in IT Department</div>
                                 </div>
                             </div>
 
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.5rem', background: '#f8fafc', borderRadius: '8px' }}>
-                                <div style={{ width: 34, height: 34, borderRadius: '8px', background: '#fef3c7', color: '#d97706', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '0.5rem', background: 'var(--bg-card-subtle)', borderRadius: '8px' }}>
+                                <div style={{ width: 34, height: 34, borderRadius: '8px', background: 'var(--amber-100)', color: 'var(--amber-500)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                     <Trophy size={18} />
                                 </div>
                                 <div>
-                                    <div style={{ fontSize: '0.85rem', fontWeight: 600, color: '#0f172a' }}>Leaderboard Contender</div>
-                                    <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Ranked in department points table</div>
+                                    <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-main)' }}>Leaderboard Contender</div>
+                                    <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Ranked in department points table</div>
                                 </div>
                             </div>
                         </div>

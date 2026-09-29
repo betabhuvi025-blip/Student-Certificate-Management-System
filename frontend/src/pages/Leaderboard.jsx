@@ -45,10 +45,10 @@ const Leaderboard = () => {
             {/* Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: '#0f172a', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                    <h2 style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--text-main)', margin: 0, display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
                         <Trophy size={24} color="#d97706" /> Student Points Leaderboard
                     </h2>
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: '0.2rem' }}>
+                    <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.2rem' }}>
                         Recognizing top co-curricular achievers: 10 pts per Win &bull; 5 pts per Participation (Verified achievements).
                     </p>
                 </div>
@@ -149,10 +149,10 @@ const Leaderboard = () => {
                             }}>
                                 1st Place Rank
                             </div>
-                            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem 0' }}>
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-main)', margin: '0 0 0.25rem 0' }}>
                                 {topThree[0].name}
                             </h3>
-                            <div style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '0.75rem' }}>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
                                 {topThree[0].roll_no || 'N/A'} &bull; {topThree[0].year} ({topThree[0].section})
                             </div>
                             <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#b45309' }}>
@@ -198,10 +198,10 @@ const Leaderboard = () => {
                             }}>
                                 2nd Place Rank
                             </div>
-                            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem 0' }}>
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-main)', margin: '0 0 0.25rem 0' }}>
                                 {topThree[1].name}
                             </h3>
-                            <div style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '0.75rem' }}>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
                                 {topThree[1].roll_no || 'N/A'} &bull; {topThree[1].year} ({topThree[1].section})
                             </div>
                             <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#334155' }}>
@@ -247,10 +247,10 @@ const Leaderboard = () => {
                             }}>
                                 3rd Place Rank
                             </div>
-                            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.25rem 0' }}>
+                            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-main)', margin: '0 0 0.25rem 0' }}>
                                 {topThree[2].name}
                             </h3>
-                            <div style={{ fontSize: '0.8rem', color: '#64748b', marginBottom: '0.75rem' }}>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
                                 {topThree[2].roll_no || 'N/A'} &bull; {topThree[2].year} ({topThree[2].section})
                             </div>
                             <div style={{ fontSize: '1.6rem', fontWeight: 800, color: '#c2410c' }}>
@@ -324,7 +324,7 @@ const Leaderboard = () => {
                                                         {student.name.charAt(0)}
                                                     </div>
                                                     <div>
-                                                        <span style={{ color: '#0f172a' }}>{student.name}</span>
+                                                        <span style={{ color: 'var(--text-main)' }}>{student.name}</span>
                                                         {isCurrentUser && (
                                                             <span style={{
                                                                 marginLeft: '0.4rem',

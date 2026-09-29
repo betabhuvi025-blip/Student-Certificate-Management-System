@@ -84,30 +84,31 @@ const NotificationDropdown = () => {
                     top: 'calc(100% + 10px)',
                     right: 0,
                     width: 360,
-                    background: '#ffffff',
+                    background: 'var(--bg-card)',
                     borderRadius: '14px',
-                    boxShadow: '0 10px 25px -5px rgba(0,0,0,0.15), 0 8px 10px -6px rgba(0,0,0,0.1)',
-                    border: '1px solid #e2e8f0',
+                    boxShadow: 'var(--shadow-xl)',
+                    border: '1px solid var(--border-color)',
                     zIndex: 60,
                     overflow: 'hidden',
+                    backdropFilter: 'blur(16px)',
                     animation: 'scaleIn 0.15s ease'
                 }}>
                     <div style={{
                         padding: '0.85rem 1rem',
-                        borderBottom: '1px solid #f1f5f9',
+                        borderBottom: '1px solid var(--border-color)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        background: '#f8fafc'
+                        background: 'var(--bg-card-subtle)'
                     }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <span style={{ fontWeight: 700, fontSize: '0.9rem', color: '#0f172a' }}>Notifications</span>
+                            <span style={{ fontWeight: 700, fontSize: '0.9rem', color: 'var(--text-main)' }}>Notifications</span>
                             {unreadCount > 0 && (
                                 <span style={{
                                     fontSize: '0.72rem',
                                     fontWeight: 700,
-                                    background: '#eff6ff',
-                                    color: '#2563eb',
+                                    background: 'var(--primary-100)',
+                                    color: 'var(--primary-500)',
                                     padding: '0.1rem 0.45rem',
                                     borderRadius: '9999px'
                                 }}>
@@ -121,7 +122,7 @@ const NotificationDropdown = () => {
                                 style={{
                                     background: 'none',
                                     border: 'none',
-                                    color: '#2563eb',
+                                    color: 'var(--primary-500)',
                                     fontSize: '0.78rem',
                                     fontWeight: 600,
                                     cursor: 'pointer'
@@ -134,7 +135,7 @@ const NotificationDropdown = () => {
 
                     <div style={{ maxHeight: 380, overflowY: 'auto' }}>
                         {notifications.length === 0 ? (
-                            <div style={{ padding: '2rem', textAlign: 'center', color: '#94a3b8', fontSize: '0.85rem' }}>
+                            <div style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-muted)', fontSize: '0.85rem' }}>
                                 No notifications yet
                             </div>
                         ) : (
@@ -144,8 +145,8 @@ const NotificationDropdown = () => {
                                     onClick={() => markAsRead(n.id)}
                                     style={{
                                         padding: '0.85rem 1rem',
-                                        borderBottom: '1px solid #f8fafc',
-                                        background: n.is_read ? '#ffffff' : '#f0f7ff',
+                                        borderBottom: '1px solid var(--border-subtle)',
+                                        background: n.is_read ? 'transparent' : 'var(--primary-50)',
                                         cursor: 'pointer',
                                         transition: 'background 0.15s ease',
                                         display: 'flex',
@@ -159,14 +160,14 @@ const NotificationDropdown = () => {
                                     <div style={{ flex: 1, minWidth: 0 }}>
                                         <p style={{
                                             fontSize: '0.83rem',
-                                            color: n.is_read ? '#475569' : '#0f172a',
+                                            color: n.is_read ? 'var(--text-muted)' : 'var(--text-main)',
                                             fontWeight: n.is_read ? 400 : 500,
                                             lineHeight: 1.4,
                                             margin: 0
                                         }}>
                                             {n.message}
                                         </p>
-                                        <span style={{ fontSize: '0.72rem', color: '#94a3b8', marginTop: '4px', display: 'block' }}>
+                                        <span style={{ fontSize: '0.72rem', color: 'var(--slate-500)', marginTop: '4px', display: 'block' }}>
                                             {formatTimeAgo(n.created_at)}
                                         </span>
                                     </div>

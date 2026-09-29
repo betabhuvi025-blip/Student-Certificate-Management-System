@@ -53,7 +53,8 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
         <div>
             {/* Header Banner */}
             <div style={{
-                background: 'linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)',
+                background: 'var(--banner-gradient)',
+                border: '1px solid var(--banner-border)',
                 color: 'white',
                 borderRadius: '16px',
                 padding: '1.75rem 2rem',
@@ -63,7 +64,9 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
                 justifyContent: 'space-between',
                 flexWrap: 'wrap',
                 gap: '1rem',
-                boxShadow: '0 10px 20px -5px rgba(37, 99, 235, 0.3)'
+                boxShadow: 'var(--banner-shadow)',
+                position: 'relative',
+                overflow: 'hidden'
             }}>
                 <div>
                     <div style={{
@@ -75,14 +78,15 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
                         borderRadius: '9999px',
                         fontSize: '0.75rem',
                         fontWeight: 600,
-                        marginBottom: '0.5rem'
+                        marginBottom: '0.5rem',
+                        backdropFilter: 'blur(8px)'
                     }}>
                         <Sparkles size={14} color="#fef08a" /> Student Portfolio &bull; Roll: {user?.roll_no || 'N/A'}
                     </div>
                     <h2 style={{ fontSize: '1.6rem', fontWeight: 800, color: 'white', margin: 0 }}>
                         Welcome back, {user?.name}!
                     </h2>
-                    <p style={{ color: '#bfdbfe', fontSize: '0.88rem', marginTop: '0.35rem' }}>
+                    <p style={{ color: 'rgba(255, 255, 255, 0.85)', fontSize: '0.88rem', marginTop: '0.35rem' }}>
                         Track your co-curricular events, certificates, and earned activity points for IT Department.
                     </p>
                 </div>
@@ -92,9 +96,9 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
                         className="btn"
                         style={{
                             background: '#ffffff',
-                            color: '#1e3a8a',
+                            color: '#0f172a',
                             fontWeight: 700,
-                            boxShadow: '0 2px 6px rgba(0,0,0,0.1)'
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.25)'
                         }}
                         onClick={onOpenAddModal}
                     >
@@ -159,9 +163,9 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
 
                                 return (
                                     <div key={item.category}>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: '0.35rem' }}>
-                                            <span style={{ fontWeight: 600, color: '#334155' }}>{item.category}</span>
-                                            <span style={{ fontWeight: 700, color: '#0f172a' }}>{count} ({percentage}%)</span>
+                                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: '0.35rem' }}>
+                                            <span style={{ fontWeight: 600, color: 'var(--slate-600)' }}>{item.category}</span>
+                                            <span style={{ fontWeight: 700, color: 'var(--text-main)' }}>{count} ({percentage}%)</span>
                                         </div>
                                         <div style={{ height: '8px', background: '#f1f5f9', borderRadius: '9999px', overflow: 'hidden' }}>
                                             <div style={{
@@ -180,29 +184,29 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
                 </div>
 
                 {/* Points System Explanation Card */}
-                <div className="card" style={{ background: '#f8fafc', border: '1px solid #e2e8f0' }}>
+                <div className="card" style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
                     <div className="card-header">
                         <h3 className="card-title" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                             <Trophy size={20} color="#d97706" /> Department Points Scheme
                         </h3>
                     </div>
 
-                    <div style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.6 }}>
+                    <div style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
                         <p style={{ marginBottom: '1rem' }}>
                             Every approved co-curricular achievement contributes towards your semester activity credit and departmental leaderboard rank:
                         </p>
                         
                         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.25rem' }}>
-                            <div style={{ background: '#ffffff', padding: '0.85rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-                                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#2563eb' }}>+10 Pts</div>
-                                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#0f172a' }}>Win / 1st / 2nd Place</div>
-                                <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Hackathon, Paper, Code Blitz</div>
+                            <div style={{ background: 'var(--bg-card-subtle)', padding: '0.85rem', borderRadius: '10px', border: '1px solid var(--border-color)' }}>
+                                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--primary-500)' }}>+10 Pts</div>
+                                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-main)' }}>Win / 1st / 2nd Place</div>
+                                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Hackathon, Paper, Code Blitz</div>
                             </div>
 
-                            <div style={{ background: '#ffffff', padding: '0.85rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
-                                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#059669' }}>+5 Pts</div>
-                                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: '#0f172a' }}>Participation</div>
-                                <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Workshops, Seminars, NPTEL</div>
+                            <div style={{ background: 'var(--bg-card-subtle)', padding: '0.85rem', borderRadius: '10px', border: '1px solid var(--border-color)' }}>
+                                <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--emerald-500)' }}>+5 Pts</div>
+                                <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-main)' }}>Participation</div>
+                                <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Workshops, Seminars, NPTEL</div>
                             </div>
                         </div>
 
@@ -259,12 +263,12 @@ const StudentDashboard = ({ onOpenAddModal, onNavigatePortfolio, onNavigateLeade
                             <tbody>
                                 {recentAchievements.slice(0, 5).map(ach => (
                                     <tr key={ach.id}>
-                                        <td>
-                                            <div style={{ fontWeight: 600, color: '#0f172a' }}>{ach.title}</div>
-                                            <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{ach.category}</div>
+                                         <td>
+                                            <div style={{ fontWeight: 600, color: 'var(--text-main)' }}>{ach.title}</div>
+                                            <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{ach.category}</div>
                                         </td>
                                         <td>
-                                            <span style={{ fontSize: '0.82rem', color: '#334155', fontWeight: 500 }}>
+                                            <span style={{ fontSize: '0.82rem', color: 'var(--slate-600)', fontWeight: 500 }}>
                                                 {ach.event_type}
                                             </span>
                                         </td>
